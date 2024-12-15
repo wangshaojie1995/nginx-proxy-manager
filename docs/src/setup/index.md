@@ -9,7 +9,6 @@ outline: deep
 Create a `docker-compose.yml` file:
 
 ```yml
-version: '3.8'
 services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
@@ -55,7 +54,6 @@ are going to use.
 Here is an example of what your `docker-compose.yml` will look like when using a MariaDB container:
 
 ```yml
-version: '3.8'
 services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
@@ -137,5 +135,13 @@ Email:    admin@example.com
 Password: changeme
 ```
 
-Immediately after logging in with this default user you will be asked to modify your details and change your password.
+Immediately after logging in with this default user you will be asked to modify your details and change your password. You can change defaults with:
+
+
+```
+    environment:
+      INITIAL_ADMIN_EMAIL: my@example.com
+      INITIAL_ADMIN_PASSWORD: mypassword1
+```
+
 
